@@ -95,7 +95,7 @@
     }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 10000px) {
     .form-header {
       font-size: 18px;
       padding: 10px;

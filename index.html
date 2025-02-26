@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Corte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>🪒IMPERIO DO CORTE🪒</h1>
+      </div>
+      
+      <form id="appointmentForm">
+        <!-- Informações Pessoais -->
+        <div class="form-section">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-small"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Informações Pessoais
+            <span class="form-section-note">(Obrigatório)</span>
+          </h2>
+          
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        
+        <!-- Data e Hora -->
+        <div class="form-section">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-small"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+            Data e Hora
+            <span class="form-section-note">(Obrigatório)</span>
+          </h2>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Data</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="time">Horário</label>
+              <input type="time" id="time" name="time" required>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cortes -->
+        <div class="form-section">
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-small"><path d="M6 9 2 7l5-4 7 4-1 1"></path><path d="m6 9 7-4"></path><path d="M9 17.8 2 13l5-4 7 4-5 4.8z"></path><path d="M18 3h3v4"></path><path d="m2 7 5 4"></path><path d="M22 17h-3v-4"></path><path d="m9 17.8 5-4.8"></path></svg>
+            Escolha o Corte
+          </h2>
+          
+          <div class="haircuts-list" id="haircutsList">
+            <!-- Haircuts will be added here by JavaScript -->
+          </div>
+        </div>
+        
+        <!-- Serviços Adicionais -->
+        <div class="form-section">
+          <h2>Serviços Adicionais</h2>
+          
+          <div class="services-list" id="servicesList">
+            <!-- Services will be added here by JavaScript -->
+          </div>
+        </div>
+        
+        <!-- Observações -->
+        <div class="form-section">
+          <label for="notes" class="notes-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-small"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Observações (opcional)
+          </label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        
+        <!-- Total -->
+        <div class="total-section">
+          <div class="total-row">
+            <span class="total-label">Total:</span>
+            <span class="total-value" id="totalPrice">R$ 0,00</span>
+          </div>
+        </div>
+        
+        <!-- Botão de Envio -->
+        <button type="submit" class="submit-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-small"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+          Enviar para WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
